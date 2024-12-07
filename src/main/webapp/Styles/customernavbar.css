@@ -1,0 +1,100 @@
+/* General styling for the layout */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Light background for contrast */
+}
+
+/* Styling the container layout */
+.container-layout {
+    display: flex;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(45deg, #4CAF50, #388E3C); /* Gradient background */
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Adds depth with shadow */
+    position: fixed; /* Makes the sidebar fixed */
+}
+
+/* Sidebar heading */
+.sidebar h3 {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+}
+
+/* Sidebar links */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #e0e0e0; /* Light gray for link text */
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for sidebar links */
+.sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Adds a light overlay effect */
+    color: #fff;
+    transform: translateX(5px); /* Slight horizontal shift */
+}
+
+/* Active link style */
+.sidebar ul li a.active {
+    background-color: #66BB6A; /* Highlights the active link */
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Responsive sidebar for smaller screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Adjust width for smaller devices */
+    }
+    
+    .sidebar ul li a {
+        font-size: 14px; /* Adjust text size */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        position: relative; /* Moves sidebar to relative for smaller screens */
+        width: 100%;
+        height: auto;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .sidebar ul li {
+        flex: 1 1 auto;
+    }
+}

@@ -6,37 +6,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <link rel="stylesheet" href="Styles/viewallcustomers.css">
+    <title>View All Customers</title>
 </head>
 <body>
-<%@ include file="adminnavbar.jsp" %>
-Total Customer:<c:out value="${count}"></c:out>
-<h3 align="center">View All Customers<h3/>
-<table align="center" border=2 class="table table-striped">
-	<tr>
-	   
-		 <th>ID</th>
-		 <th>NAME</th>
-		 <th>GENDER</th>
-		 <th>DATE OF BIRTH</th>
-		 <th>EMAIL</th>
-		 <th>LOCATION</th>
-		 <th>CONTACT NO</th>
-		 
+    <%@ include file="adminnavbar.jsp" %>
 
-	<tr/>
-	<c:forEach items="${customerlist}" var="customer">
-	    <tr>
-	        <td><c:out value="${customer.id}" /></td>
-			<td><c:out value="${customer.name}" /></td>
-			<td><c:out value="${customer.gender}" /></td>
-			<td><c:out value="${customer.dateofbirth}" /></td>
-			<td><c:out value="${customer.email}" /></td>
-			<td><c:out value="${customer.location}" /></td>
-			<td><c:out value="${customer.contact}" /></td>
-	    </tr>
-	</c:forEach>
+    <div class="container">
+        <h2 class="heading">View All Customers</h2>
+        <p class="total">Total Customers: <span class="highlight"><c:out value="${count}" /></span></p>
 
-</table>
+        <div class="table-container">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Date of Birth</th>
+                        <th>Email</th>
+                        <th>Location</th>
+                        <th>Contact No</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <c:forEach items="${customerlist}" var="customer">
+                        <tr>
+                            <td><c:out value="${customer.id}" /></td>
+                            <td><c:out value="${customer.name}" /></td>
+                            <td><c:out value="${customer.gender}" /></td>
+                            <td><c:out value="${customer.dateofbirth}" /></td>
+                            <td><c:out value="${customer.email}" /></td>
+                            <td><c:out value="${customer.location}" /></td>
+                            <td><c:out value="${customer.contact}" /></td>
+                        </tr>
+                    </c:forEach>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

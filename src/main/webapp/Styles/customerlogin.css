@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/* General Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Container for the entire page */
+.login-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Left Side (Image) */
+.login-left {
+    flex: 1;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-image {
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Right Side (Form) */
+.login-right {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+h2 {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+p.description {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Form Inputs */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #5cb85c;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #4cae4c;
+}
+
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: #333;
+    margin-top: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+/* Sign Up Link */
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signup-link a {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-left, .login-right {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .login-image {
+        width: 100%;
+    }
+}

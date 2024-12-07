@@ -24,6 +24,21 @@ public  class CustomerServiceImpl implements CustomerService
 	{
 		return customerRepository.checkCustomerLogin(email, password);
 	}
+
+	@Override
+	public String updateCustomer(Customer customer) {
+		Customer c=customerRepository.findById(customer.getId()).get();
+		
+		c.setContact(customer.getContact());
+		c.setDateofbirth(customer.getDateofbirth());
+		c.setGender(customer.getGender());
+		c.setLocation(customer.getLocation());
+		c.setName(customer.getName());
+		c.setPassword(customer.getPassword());
+		
+		customerRepository.save(c);
+		return "Customer Updated Successfully";
+	}
 	
 	
 	

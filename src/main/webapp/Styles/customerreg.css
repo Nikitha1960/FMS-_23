@@ -1,0 +1,120 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Full height */
+    width: 100%;
+}
+
+/* Left Section: Form */
+.form-section {
+    flex: 1; /* Takes 50% width of the screen */
+    padding: 40px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-section h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 90%;
+    max-width: 400px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.gender-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #ccc;
+    color: black;
+}
+
+/* Back Button Styles */
+.btn-primary {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+     padding: 10px 15px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Slightly larger font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center-align text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;/* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline from anchor */
+    display: inline-block; /* Ensure it behaves like a button */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.btn-primary:hover {
+    background-color: #388E3C; /* Darker green on hover */
+    transform: scale(1.05); /* Slight scale-up effect */
+}
+
+
+/* Right Section: Image */
+.image-section {
+    flex: 1; /* Takes 50% width of the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Add subtle background color */
+}
+
+.image-section img {
+    width: 80%;
+    height: auto;
+    object-fit: cover; /* Ensures the image fits properly */
+    max-height: 80vh; /* Prevents the image from exceeding viewport height */
+}

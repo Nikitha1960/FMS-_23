@@ -33,6 +33,20 @@ public class CustomerController
 		mv.setViewName("customerreg");
 		return mv;
 	}
+	@GetMapping("customerhome")
+	public ModelAndView customerhome()
+	{
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("customerhome");
+		return mv;
+	}
+	@GetMapping("customerprofile")
+	public ModelAndView customerprofile()
+	{
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("customerprofile");
+		return mv;
+	}
 	
 	@PostMapping("insertcustomer")
 	public ModelAndView insercustomer(HttpServletRequest request)
@@ -87,5 +101,55 @@ public class CustomerController
 		}
 		return mv;
 	}
+	
+	@GetMapping("customerLogout")
+	public ModelAndView customerLogout()
+	{
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("customerlogin");
+		return mv;
+	}
+	
+	@GetMapping("updateprofile")
+	public ModelAndView updateprofile()
+	{
+		ModelAndView mv=new ModelAndView("updateprofile");
+		return mv;
+	}
+	
+	@PostMapping("update")
+	public ModelAndView update(HttpServletRequest request)
+	{
+		ModelAndView mv=new ModelAndView("");
+		
+		int id=Integer.parseInt(request.getParameter("cid"));
+		String name =request.getParameter("cname");
+		String gender = request.getParameter("cgender");
+		String dob = request.getParameter("cdob");
+		String location = request.getParameter("clocation");
+		String contact = request.getParameter("ccontact");
+		String password = request.getParameter("cpwd");
+		
+		Customer customer =new Customer();
+		customer.setId(id);
+		customer.setName(name);
+		customer.setGender(gender);
+		customer.setDateofbirth(dob);
+		customer.setLocation(location);
+		customer.setContact(contact);
+		customer.setPassword(password);
+		
+		customerservice.updateCustomer(customer);
+		
+		//create new session variable for customer
+		//case1=update customer session variable by taking customer object from table
+		//case2=you logout after updating profile
+		
+		mv.setViewName("customerlogin");
+		
+		
+		return mv;
+	}
+	
 
 }
