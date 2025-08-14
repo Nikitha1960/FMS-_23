@@ -1,17 +1,17 @@
-# Faculty Management System (FMS)
+# Farmer Management System (FMS)
 
-A Java-based application designed to efficiently manage faculty details such as personal information, subjects taught, schedules, and department assignments.  
-This project demonstrates **core Java skills, object-oriented programming principles, and data management** using Java Collections Framework.
+A Java-based application designed to manage farmer records, crop details, and related agricultural data.  
+This project demonstrates **Core Java skills, Object-Oriented Programming (OOP) principles, and data management** using the Java Collections Framework.
 
 ---
 
 ## Features
-- Add, view, update, and delete faculty records
-- Manage department and course details
-- Search faculty by ID or name
+- Add, view, update, and delete farmer records
+- Store crop details and farming information
+- Search farmers by ID or name
 - Store and retrieve data dynamically using Java Collections
-- Input validation and exception handling for robust performance
-- Modular design for easy maintenance and scalability
+- Input validation and exception handling for reliable performance
+- Modular code structure for easy maintenance and scalability
 
 ---
 
@@ -21,12 +21,13 @@ This project demonstrates **core Java skills, object-oriented programming princi
 - Exception Handling
 - Input Validation
 
-## Project Structure
+---
+
+## 📂 Project Structure
 FMS-_23/
 │── src/
-│ ├── Faculty.java
-│ ├── Department.java
-│ ├── Course.java
+│ ├── Farmer.java
+│ ├── Crop.java
 │ ├── FMSMain.java
 │── README.md
 │── LICENSE
